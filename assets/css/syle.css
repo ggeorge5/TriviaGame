@@ -1,0 +1,9 @@
+body {
+    background: url(../../assets/images/Chiefs_logo.jpg);
+}
+
+.maincontent {
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+}
