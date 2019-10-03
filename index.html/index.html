@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Chiefs Trivia Game</title>
 </head>
 <body>
+    <container class="background">
+
+        <div class="maincontent">
+            <p class="maintitle">Chiefs Trivial Trivia!</p>
+
+
+            <button id="start">Start!</button>
+            
+
+            <div id="timer"></div>
+
+            <div class="question1">
+                <h2>What was Len Dawsons number</h2>
+                    <ul>
+                        <li>5</li>
+                        <li>12</li>
+                        <li>16</li>
+                        <li>18</li>
+                    </ul>
+            </div>
+
+
+        </div>
+    </container>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        var number = 200;
+
+        var intervalId;
+
+        $("#start").on("click", run);
+
+
+        function run() {
+            intervalId = setInterval(decrement, 1000);
+        }
+
+        function decrement () {
+            number--;
+
+            $("#timer").text(number);
+
+            if (number === 0) {
+                stop();
+
+                alert('Times Up!');
+            }
+        }
+
+
+
+        
+
     
+    
+    
+    
+    
+    </script>
 </body>
 </html>
