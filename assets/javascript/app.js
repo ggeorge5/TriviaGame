@@ -130,6 +130,7 @@ function buildQuiz() {
   function run() {
       clearInterval(intervalId);
       intervalId = setInterval(decrement, 1000);
+      buildQuiz();
       }
       
   function decrement () {
@@ -139,7 +140,7 @@ function buildQuiz() {
   $("#timer").text(number);
       if (number === 0) {
           stop();
-          alert('Times Up! ' + 'See your score below!' + 'Thanks for playing!');
+          alert('Times Up! ' + ' See your score below! ' + ' Thanks for playing!');
           showResults();
           }
       }
