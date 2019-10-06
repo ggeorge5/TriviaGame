@@ -10,109 +10,28 @@
     <title>Chiefs Trivia Game</title>
 </head>
 <body>
-
-        <div class="maincontent text-center">
-            <p class="maintitle">Chiefs Trivial Trivia!</p>
-
-
-            <button id="start">Start!</button>
+    <div class="maincontent">
+        <h2>Chiefs Trivia!</h2>
+        <button id="start">Start!</button>
             
             
-            <h2>Time Remaining: </h2><div id="timer"></div>
+        <h2>Time Remaining: </h2><div id="timer"></div>
+        
+        <div id="quiz"></div>
+        <button id="submit">Submit!</button>
+        <div id="results"></div>
+    </div>  
 
-            <div class="question1">
-                <h2>What was Len Dawsons number</h2>
-                    <ul>
-                        <input type = "radio" name = "radSize" id = "sizeLarge1" value = "large" /> <label for = "sizeLarge">10</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge2" value = "large" /> <label for = "sizeLarge">12</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge3" value = "large" /> <label for = "sizeLarge">16</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge4" value = "large" /> <label for = "sizeLarge">18</label>
-                    </ul>
-            </div>
-
-            <div class="question2">
-                <h2>How many Super Bowls have the Chiefs won?</h2>
-                    <ul>
-                        <input type = "radio" name = "radSize" id = "sizeLarge1" value = "large" /> <label for = "sizeLarge">2</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge2" value = "large" /> <label for = "sizeLarge">0</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge3" value = "large" /> <label for = "sizeLarge">3</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge4" value = "large" /> <label for = "sizeLarge">1</label>
-                    </ul>
-            </div>
-
-            <div class="question3">
-                <h2>What is the name of the stadium the Chiefs play at?</h2>
-                    <ul>
-                        <input type = "radio" name = "radSize" id = "sizeLarge1" value = "large" /> <label for = "sizeLarge">Andy Reid Collesium</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge2" value = "large" /> <label for = "sizeLarge">Patricks Mahome</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge3" value = "large" /> <label for = "sizeLarge">Chiefs Stadium</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge4" value = "large" /> <label for = "sizeLarge">Arrowhead Stadium</label>
-                    </ul>
-            </div>
-
-            <div class="question4">
-                <h2>How many seasons has the Chiefs franchise played in?</h2>
-                    <ul>
-                        <input type = "radio" name = "radSize" id = "sizeLarge1" value = "large" /> <label for = "sizeLarge">60</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge2" value = "large" /> <label for = "sizeLarge">35</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge3" value = "large" /> <label for = "sizeLarge">40</label>
-                        <input type = "radio" name = "radSize" id = "sizeLarge4" value = "large" /> <label for = "sizeLarge">52</label>
-                    </ul>
-            </div>
-
-            <button id="done">Done!</button>
-
-
-        </div>
-    </container>
-
-
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-        var number = 60;
-
-        var intervalId;
-
-        $("#start").on("click", run);
-
-
-        function run() {
-            intervalId = setInterval(decrement, 1000);
-        }
-
-        function decrement () {
-            number--;
-
-            $("#timer").text(number);
-
-            if (number === 0) {
-                stop();
-
-                alert('Times Up!');
-            }
-        }
-
-        function correctAnswer() {
-            var lenDawson = document.getElementById("sizeLarge3");
-            if (lenDawson.checked) {
-                console.log('Correct!')
-            }
-        }
-
-        $("#done").on("click", function(){
-            correctAnswer();
-        });
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/javascript/app.js">
+    
+ 
 
     
+ </script>
+
     
-    
-    
-    
-    </script>
+
+
 </body>
 </html>
